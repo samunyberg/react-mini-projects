@@ -1,0 +1,83 @@
+.stepContainer {
+  display: flex;
+  gap: 60px;
+  justify-content: space-around;
+  position: relative;
+}
+
+.stepContainer::before {
+  content: "";
+  background-color: lightgray;
+  height: 4px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.progressLine {
+  background-color: rgb(85, 169, 253);
+  height: 4px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 33.3%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.step {
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  color: gray;
+  display: flex;
+  font-size: 18px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+  transition: 0.4s ease 0.2s;
+}
+
+.step.completed {
+  border-color: rgb(85, 169, 253);
+  color: rgb(85, 169, 253);
+}
+
+.step.current {
+  border: 3px solid dodgerblue;
+  color: dodgerblue;
+  transform: scale(1.2);
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: rgb(85, 169, 253);
+  border: none;
+  width: 80px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: dodgerblue;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: #e3e3e3;
+  cursor: not-allowed;
+}
