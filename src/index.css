@@ -7,11 +7,7 @@
 }
 
 body {
-  align-items: center;
-  display: flex;
   font-family: "Roboto", sans-serif;
-  height: 100vh;
-  justify-content: center;
-  overflow: hidden;
   margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,155 @@
+.navPanel {
+  background-color: #333;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.rotatingPanel {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+
+.rotatingPanel.showNav {
+  transform: rotate(-15deg);
+}
+
+.nav {
+  bottom: 40px;
+  color: white;
+  left: 0;
+  position: fixed;
+  text-transform: uppercase;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+  transform: translateX(-200px);
+  transition: transform 0.3s;
+}
+
+.navPanel.showNav .nav ul li {
+  transform: translateX(0);
+  transition: transform 0.3s;
+  transition-delay: 0.3s;
+}
+
+.nav ul li:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.nav ul li + li {
+  margin-left: 8px;
+}
+
+.nav ul li + li + li {
+  margin-left: 16px;
+}
+
+.rotatingPanel.showNav .nav {
+  left: 100px;
+}
+
+.circleContainer {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index: 99;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #ff7979;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s linear;
+}
+
+.navPanel.showNav .circle {
+  transform: rotate(-90deg);
+}
+
+.icon {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+}
+
+.icon :hover {
+  opacity: 0.8;
+}
+
+.icon.icon-open {
+  top: 65%;
+  left: 60%;
+}
+
+.icon.icon-close {
+  top: 60%;
+  right: 65%;
+}
+
+.contentContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 110px 40px 30px 40px;
+}
+
+.content h1 {
+  color: #333;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.content h2 {
+  color: #555;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.content p:first-of-type:first-letter {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.content h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.img {
+  max-width: 100%;
+}
